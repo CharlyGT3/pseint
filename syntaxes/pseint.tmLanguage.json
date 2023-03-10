@@ -1,0 +1,87 @@
+{
+    "name": "PSeInt",
+    "scopeName": "source.pseint",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#identifiers"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "name": "comment.block.pseint"
+                },
+                {
+                    "begin": "//",
+                    "end": "$",
+                    "name": "comment.line.pseint"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "begin": "\"",
+                    "end": "\"",
+                    "name": "string.quoted.double.pseint",
+                    "patterns": [
+                        {
+                            "match": "\\\\[\"nrt\\\\]",
+                            "name": "constant.character.escape.pseint"
+                        }
+                    ]
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "match": "\\b(algoritmo|fin_algoritmo|proceso|fin_proceso|leer|escribir|si|entonces|sino|fin_si|mientras|hacer|fin_mientras|para|fin_para|segun|fin_segun|caso|defecto|fin_caso|repetir|hasta_que|desde|con|paso)\\b",
+                    "name": "keyword.control.pseint"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "match": "\\+|-|\\*|/|%|<|>|=|<=|>=|<>|<-",
+                    "name": "keyword.operator.pseint"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "match": "\\b[0-9]+\\b",
+                    "name": "constant.numeric.pseint"
+                }
+            ]
+        },
+        "identifiers": {
+            "patterns": [
+                {
+                    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+                    "name": "identifier.pseint"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pseint",
+  "displayName": "PSeInt",
+  "description": "Esta extensión te permite resaltar la sintaxis de PSeInt en Visual Studio Code. PSeInt es una herramienta educativa para aprender los fundamentos de la programación y el desarrollo de la lógica. Con esta extensión podrás escribir y leer código en pseudolenguaje con mayor facilidad y claridad.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pseint",
+      "aliases": ["PSeInt", "pseint"],
+      "extensions": [".psc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pseint",
+      "scopeName": "source.pseint",
+      "path": "./syntaxes/pseint.tmLanguage.json"
+    }]
+  }
+}
